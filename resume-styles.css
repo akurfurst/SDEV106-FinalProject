@@ -6,7 +6,6 @@ nav {
     font-size: 20px;
     height: 60px;
     background: #2C3930;
-    border-bottom: 1px solid #ccc;
 }
 /* Resume Page Styles */
 
@@ -29,8 +28,12 @@ header {
 
 
 .skills {
+    grid-area: skills;
     width: 100%;
-    margin-top: 40px;
+    margin: 0;
+    position: static;
+    left: auto;
+    transform: none;
 }
 
 .skills-row {
@@ -44,20 +47,15 @@ header {
 }
 
 .skill-bubble {
-    background: #eaeaea;
+    background: #2C3930;
     border: 1px solid #bbb;
     border-radius: 50px;
     padding: 12px 32px;
     font-size: 1rem;
     font-weight: bold;
-    color: #222;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    transition: background 0.2s;
+    color: #DCD7C9;
 }
 
-.skill-bubble:hover {
-    background: #d4d4d4;
-}
 
 nav a, nav button {
     padding: 16px 32px;
@@ -67,7 +65,7 @@ nav a, nav button {
     text-decoration: none;
     font-weight: bold;
     margin: 0 2px;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 nav button {
@@ -76,12 +74,28 @@ nav button {
     border: none;
 }
 
+nav a:hover, nav button:hover {
+    background: #3F4F44;
+    transition: .5s;
+}
+
 .resume-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "education work"
+        "skills skills";
     gap: 40px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 40px;
+}
+
+.education {
+    grid-area: education;
+}
+
+.work-experience {
+    grid-area: work;
 }
 
 .education, .work-experience {
@@ -107,4 +121,49 @@ h2 {
 h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+}
+
+.skills h2 {
+    text-align: center;
+    color: #DCD7C9;
+    border-bottom: 5px solid #A27B5C;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+footer {
+    grid-area: footer;
+    background: #2C3930;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #DCD7C9;
+    margin: 0;
+    padding: 10px;
+}
+
+/*Mobile*/
+@media screen and (max-width: 480px){
+    .resume-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+    text-align: center;
+    color: #DCD7C9;
+    border-bottom: 5px solid #A27B5C;
+    margin-left: 5%;
+    margin-right: 5%;   
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
 }
