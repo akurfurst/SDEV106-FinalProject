@@ -1,4 +1,31 @@
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-size: 20px;
+    height: 60px;
+    background: #2C3930;
+}
+
+nav a, nav button {
+    padding: 16px 32px;
+    border: 1px solid #222;
+    background: #2C3930;;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 2px;
+    border-radius: 0;
+}
+
+nav button {
+    background: #444;
+    color: #fff;
+    border: none;
+}
+
 .container{
     display: grid;
     grid-template-areas: 
@@ -13,17 +40,16 @@ body{
     background-color: #3F4F44;
 }
 
-nav{
+nav {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 0px;
-    font-size: 24px;
-    height: 50px;
-    background-color: #2C3930;
-    margin: 0;
     align-items: center;
+    gap: 0;
+    font-size: 20px;
+    height: 60px;
+    background: #2C3930;
 }
+
 
 /*Main Content*/
 main{
@@ -34,34 +60,40 @@ main{
     grid-template-areas:
         "selfImg name"
         "selfImg aboutMe";
-    border: 10px solid black;
-    padding: 70px 20px 20px 20px;
-    margin-top: 50px;
+    padding: 20px;
+    margin-top: 70px;
     background-color: #A27B5C;
     margin-left: 40px;
     margin-right: 40px;
+    border-radius: 20px;
 
 }
 #selfImg{
     grid-area: selfImg;
-    width: 45vw;
+    width: 30vw;
     max-width: 100%;
     height: auto;
-    max-height: 700px;
-    object-fit: cover;
+    object-fit: contain;
     align-self: center;
     justify-self: center;
-    border: 5px solid red;
+    border-radius: 20px;
 }
 
 #name{
     grid-area: name;
     align-self: start;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #3F4F44;
 }
 
 #aboutMe{
     grid-area: aboutMe;
     align-self: start;
+    color: #DCD7C9;
+    padding-right: 80px;
+    font-size: 25px;
+    text-align: center;
 }
 
 
@@ -110,10 +142,12 @@ a:visited{
     justify-content:  center;
     flex-direction: column;
     align-items: center;
-    border: 5px solid red;
     flex: 1;
     padding: 20px;
     background-color: #DCD7C9;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 
 }
 
