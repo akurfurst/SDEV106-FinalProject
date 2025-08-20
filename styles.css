@@ -59,7 +59,7 @@ nav a, nav button {
     padding: 16px 32px;
     border: 1px solid #222;
     background: #2C3930;;
-    color: #222;
+    color: #DCD7C9;
     text-decoration: none;
     font-weight: bold;
     margin: 0 2px;
@@ -87,9 +87,6 @@ body{
     margin: 0;
 }
 
-
-
-/*Main Content*/
 main{
     grid-area: main;
     display: grid;
@@ -122,6 +119,7 @@ main{
     grid-area: name;
     align-self: start;
     text-align: center;
+    color: #DCD7C9;
     padding-bottom: 20px;
     border-bottom: 5px solid #3F4F44;
 }
@@ -144,6 +142,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
 footer {
     grid-area: footer;
     background: #2C3930;
@@ -168,16 +167,6 @@ nav a:hover, nav button:hover {
     transition: .5s;
 }
 
-a:link{
-    color: white;
-}
-
-a:visited{
-    color: white;
-}
-
-
-
 .flex-articles {
     display: flex;
     flex-direction: row;
@@ -185,6 +174,34 @@ a:visited{
     grid-area: articles;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.flex-articles h2{
+    text-decoration: none;
+    color: #222;
+    border-bottom: 5px solid #3F4F44;
+    
+}
+
+.flex-articles a{
+    text-decoration: none;
+}
+
+.flex-articles h2:hover{
+    color: #A27B5C;
+}
+
+.flex-articles h2{
+    text-align: center;
+    transition: .5s;
+}
+
+.flex-articles p{
+    text-align: center;
+    color: #3F4F44;
+    font-size: 1.25rem;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 #about, #resume, #projects {
@@ -259,6 +276,7 @@ section img {
         gap: 15px;
         margin: 0 auto;
         max-width: 400px;
+        color: #222;
     }
 
     .flex-articles > section {
