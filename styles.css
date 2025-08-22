@@ -248,7 +248,7 @@ section img {
         margin-left: 40px;
     }
 
-    main > #selfImg {
+    main #selfImg {
         order: 1;
         width: 80vw;
         max-width: 100%;
@@ -256,14 +256,14 @@ section img {
         align-self: center;
     }
 
-    main > #name {
+    main #name {
         order: 2;
         align-self: center;
         text-align: center;
         border-bottom: 5px solid #3F4F44;
     }
 
-    main > #aboutMe {
+    main #aboutMe {
         order: 3;
         font-size: 18px;
         padding: 15px;
@@ -279,7 +279,7 @@ section img {
         color: #222;
     }
 
-    .flex-articles > section {
+    .flex-articles section {
         width: 90%;
         margin: 0;
         border-radius: 10px;
